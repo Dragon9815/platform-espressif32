@@ -732,6 +732,7 @@ def RunMenuconfig(target, source, env):
 def run_cmake(src_dir, build_dir, extra_args=None):
     cmd = [
         os.path.join(platform.get_package_dir("tool-cmake") or "", "bin", "cmake"),
+        "-DCCACHE_ENABLE",
         "-S",
         src_dir,
         "-B",
