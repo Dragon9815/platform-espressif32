@@ -1,4 +1,4 @@
-# Copyright 2020-present PlatformIO <contact@platformio.org>
+ # Copyright 2020-present PlatformIO <contact@platformio.org>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -732,7 +732,7 @@ def RunMenuconfig(target, source, env):
 def run_cmake(src_dir, build_dir, extra_args=None):
     cmd = [
         os.path.join(platform.get_package_dir("tool-cmake") or "", "bin", "cmake"),
-        "-DCCACHE_ENABLE",
+        "-DCCACHE_ENABLE=1",
         "-S",
         src_dir,
         "-B",
